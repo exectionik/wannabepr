@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Please put height of tower: ");
         double height_tower = myObj.nextDouble();
 
-        System.out.println("Please put height of step :): ");
+        System.out.println("Please put height of step :/: ");
         double height_step = myObj.nextDouble();
 
         System.out.println("Please put lenght of step: ");
