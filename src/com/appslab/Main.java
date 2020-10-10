@@ -8,19 +8,18 @@ public class Main {
 
         public static void main(String[] args) {
 
-            System.out.println(fciaaa(3, 3, 3));
+            System.out.println(fciaaa(2, 3, 4));
         }
-            public static int fciaaa(int a, int b, int c){
-                int eqe = 1;
-                if (a == b)
+            public static boolean fciaaa(int a, int b, int c){
+                int eqe = 0;
+                boolean pepe = false;
+                if ((a + b > c) && (a + c > b) && (b + c > a))
                     eqe++;
-                if (a == c)
+                if ((a*a + b*b == c*c) || (b*b + c*c == a*a) || (c*c + a*a == b*b))
                     eqe++;
-                if (c == b)
-                    eqe++;
-                if (a == b && a == c && b == c)
-                    eqe--;
-                return eqe;
+                if (eqe > 0)
+                    pepe = true;
+                return pepe;
 
 
 
