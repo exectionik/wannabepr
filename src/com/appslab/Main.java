@@ -1,21 +1,20 @@
 package com.appslab;
-import java.util.Arrays;
 
 public class Main {
 
-    public static int[] numbs(){
+    public static boolean equalSlices(int a,int b,int c){
+        boolean pepe = false;
+        if(a >= b*c){
+            pepe = true;
+        }
+        return pepe;
 
-        int[] ar = {5,6,9,8};
-        return ar;
 
         }
 
 
     public static void main(String[] args) {
-        int[] arr=numbs();
-        for (int i = 0; i< arr.length;i++){
-            System.out.println(arr[i] + " " + arr[i] * arr.length);
-        }
+        System.out.println(equalSlices(24,12,2));
 
     }
 
