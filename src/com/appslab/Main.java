@@ -1,25 +1,30 @@
 package com.appslab;
 
 public class Main{
-    public static String rps(String p1, String p2){
-        String result;
-        if (p1 == "rock" && p2== "paper" || p2 =="scissors" && p1=="paper" || p2=="rock" && p1=="scissors"){
-            result = "p2 wins";
+    public static int sumbudget(Workers[] arr){
+        int i = 0;
+        for(Workers worker: arr){
+            i = i+ worker.getBudget();
+
         }
-        else if (p1 == p2){
-            result = "tie";
-        }
-        else{
-            result="p1 wins";
-        }
-        return  result;
+
+        return i;
+
     }
 
 
-    public static void main(String arr[]) {
-        System.out.println(rps("rock", "paper"));
 
 
+    public static void main(String[] args) {
+        Workers[] arr;
+
+        arr = new Workers[3];
+        arr[0] = new Workers("Fero", 18, 20000);
+        arr[1] = new Workers("Jozik", 22, 50000);
+        arr[2] = new Workers("Martin", 41, 45000);
+
+
+        System.out.println(sumbudget(arr));
     }
 
 
