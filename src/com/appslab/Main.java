@@ -1,30 +1,28 @@
 package com.appslab;
+import java.lang.*;
 
 public class Main{
-    public static int sumbudget(Workers[] arr){
-        int i = 0;
-        for(Workers worker: arr){
-            i = i+ worker.getBudget();
+    public static int diffrnc(int[]m_minus){
+        int min = m_minus[0];
+        int max= m_minus[0];
+
+            for(int i=1;i< m_minus.length ;i++) {
+                if (min > m_minus[i]) {
+                    min = m_minus[i];
+                } else if (max < m_minus[i]) {
+                    max = m_minus[i];
+                }
+            }
+
+        return max-min;
 
         }
-
-        return i;
-
-    }
-
 
 
 
     public static void main(String[] args) {
-        Workers[] arr;
-
-        arr = new Workers[3];
-        arr[0] = new Workers("Fero", 18, 20000);
-        arr[1] = new Workers("Jozik", 22, 50000);
-        arr[2] = new Workers("Martin", 41, 45000);
-
-
-        System.out.println(sumbudget(arr));
+        int [] arr= {1,2,3,4,5,6};
+        System.out.println(diffrnc(arr));
     }
 
 
