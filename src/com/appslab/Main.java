@@ -1,28 +1,32 @@
 package com.appslab;
 import java.lang.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main{
-    public static int diffrnc(int[]m_minus){
-        int min = m_minus[0];
-        int max= m_minus[0];
-
-            for(int i=1;i< m_minus.length ;i++) {
-                if (min > m_minus[i]) {
-                    min = m_minus[i];
-                } else if (max < m_minus[i]) {
-                    max = m_minus[i];
-                }
+    public static int war(int[]companions){
+        int even=0;
+        int uneve=0;
+        int vysledok=0;
+        for(int i = 0;i< companions.length;i++){
+            if (companions[i]%2==0){
+                even+=companions[i];
             }
-
-        return max-min;
-
+            if (companions[i]%2!=0){
+                uneve+=companions[i];
+            }
         }
-
+       if (even-uneve>0){
+           vysledok=even-uneve;
+       }
+       else vysledok=uneve-even;
+        return vysledok ;
+        }
 
 
     public static void main(String[] args) {
         int [] arr= {1,2,3,4,5,6};
-        System.out.println(diffrnc(arr));
+        System.out.println(war(arr));
     }
 
 
